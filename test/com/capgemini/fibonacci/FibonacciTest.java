@@ -8,11 +8,6 @@ import org.junit.Test;
 
 public class FibonacciTest {
 	/**
-	 * Klasa Fibonnacci implementuje metode fib, 
-	 * ktora zwraca wartosc n-tego elementu ciagu Fibonacciego
-	 * gdzie n jest podawany w argumencie metody
-	 * 
-	 * 
 	 * Dla n większego od 0 zwracana jest wartosc ciagu n-tego elementu
 	 * Dla n mniejszego od 1 zwracany jest wyjątek
 	 */
@@ -53,7 +48,7 @@ public class FibonacciTest {
 	}
 	
 	@Test
-	public void shouldReturn_JustCallItALot_When_1500_As_Argument() {
+	public void shouldReturn_JustCallItALot_When_50_As_Argument() {
 		//given
 		
 		//when
