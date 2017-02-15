@@ -5,7 +5,7 @@ import java.math.*;
 public class Fibonacci {
 
 	public static BigInteger fib(int n) {
-		if (n < 1) throw new IllegalArgumentException();
+		if (n < 1 || n > 100_000) throw new IllegalArgumentException();
 		else if (n <= 1) return BigInteger.valueOf(n);
 		else {
 			BigInteger a = BigInteger.valueOf(0);

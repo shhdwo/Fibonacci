@@ -9,7 +9,7 @@ import org.junit.Test;
 public class FibonacciTest {
 	/**
 	 * Dla n większego od 0 zwracana jest wartosc ciagu n-tego elementu
-	 * Dla n mniejszego od 1 zwracany jest wyjątek
+	 * Dla n mniejszego od 1 lub wiekszego od 100_000 zwracany jest wyjątek
 	 */
 	
 	
@@ -24,6 +24,15 @@ public class FibonacciTest {
 		
 		//when
 		Fibonacci.fib(-3);
+		//then
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void shouldNotAcceptMoreThan_5000_AsArgument() {
+		//given
+		
+		//when
+		Fibonacci.fib(100_001);
 		//then
 	}
 	
