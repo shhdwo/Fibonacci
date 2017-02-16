@@ -6,7 +6,7 @@ public class Fibonacci {
 
 	public static BigInteger fib(int n) {
 		if (n < 1 || n > 100_000) throw new IllegalArgumentException();
-		else if (n <= 1) return BigInteger.valueOf(n);
+		else if (n == 1) return BigInteger.valueOf(n);
 		else {
 			BigInteger a = BigInteger.valueOf(0);
 			BigInteger b = BigInteger.valueOf(1);
@@ -18,6 +18,15 @@ public class Fibonacci {
 					b = fibo;
 				}
 			}
+			return fibo;
+		}
+	}
+	
+	public static BigInteger fibRecursively(int n) {
+		if (n < 1 || n > 20) throw new IllegalArgumentException();
+		else if (n <= 2) return BigInteger.valueOf(1);
+		else {
+			BigInteger fibo = fibRecursively(n-1).add(fibRecursively(n-2));
 			return fibo;
 		}
 	}
